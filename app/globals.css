@@ -1,0 +1,125 @@
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens for romantic theme */
+  --background: oklch(0.98 0.02 85); /* Soft cream background */
+  --foreground: oklch(0.35 0.02 240); /* Warm gray text */
+  --card: oklch(1 0 0); /* Pure white cards */
+  --card-foreground: oklch(0.35 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.35 0.02 240);
+  --primary: oklch(0.45 0.15 65); /* Warm golden primary */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.65 0.25 15); /* Romantic rose accent */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.96 0.01 85);
+  --muted-foreground: oklch(0.5 0.02 240);
+  --accent: oklch(0.65 0.25 15); /* Rose accent for highlights */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0.01 240);
+  --input: oklch(1 0 0);
+  --ring: oklch(0.45 0.15 65);
+  --chart-1: oklch(0.65 0.25 15);
+  --chart-2: oklch(0.96 0.01 85);
+  --chart-3: oklch(0.98 0.02 85);
+  --chart-4: oklch(0.45 0.15 65);
+  --chart-5: oklch(0.35 0.02 240);
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.35 0.02 240);
+  --sidebar-primary: oklch(0.98 0.02 85);
+  --sidebar-primary-foreground: oklch(0.35 0.02 240);
+  --sidebar-accent: oklch(0.65 0.25 15);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.9 0.01 240);
+  --sidebar-ring: oklch(0.45 0.15 65);
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe0ec 0%, #fad0c4 100%);
+  position: relative;
+}
+
+/* Corações animados no fundo */
+.heart {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url('/images/heart.svg') no-repeat center/contain;
+  opacity: 0.15;
+  animation: float 8s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-40px) scale(1.1); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* Detalhes românticos para botões e cards */
+.romantic-btn {
+  background: linear-gradient(90deg, #ffb6b9 0%, #fae3d9 100%);
+  color: #b91372;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px #ffb6b955;
+  transition: transform 0.2s;
+}
+.romantic-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px #ffb6b988;
+}
+
+.romantic-card {
+  background: #fff0f6cc;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px #ffb6b933;
+  border: 1px solid #ffd6e0;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+
+
+
